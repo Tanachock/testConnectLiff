@@ -9,6 +9,9 @@ import { LiffService } from '../liff.service';
 export class HomeComponent implements OnInit{
   isLoggedIn: any;
   profile: any;
+  img: string = ''
+  name: string = ''
+  uid: string = ''
 
   constructor(private LiffService: LiffService) { }
   ngOnInit() {
@@ -20,5 +23,6 @@ export class HomeComponent implements OnInit{
     } else {
     this.LiffService.login();
   }
+  console.log(this.profile)
   }
 }
