@@ -14,6 +14,10 @@ export class AppComponent implements OnInit{
   ngOnInit(){
     liff.init({
     liffId: "2005506236-JNw3MvnV",
+  }).then(() => {
+    if (!liff.isLoggedIn()) {
+      liff.login()
+    }
   })
   .catch((err) => {
     console.log(err.code, err.message);
