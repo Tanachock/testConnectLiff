@@ -8,7 +8,7 @@ import liff from '@line/liff';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  img: string = ''
+  img: any
   name: string = ''
   uid: any
 
@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
     if (liff.isLoggedIn()) {
       liff.getProfile().then((profile) => {
           console.log(profile)
+          this.name = profile.displayName
+          this.img = profile.pictureUrl
+          this.uid = profile.userId
         })
         .catch((err) => {
           console.log("error", err);
