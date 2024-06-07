@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LiffService } from './liff.service';
+import liff from '@line/liff';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,11 @@ export class AppComponent implements OnInit{
   constructor(private LiffService:LiffService){}
 
   ngOnInit(){
-    this.LiffService.initLiff()
+    liff.init({
+    liffId: "2005506236-JNw3MvnV",
+  })
+  .catch((err) => {
+    console.log(err.code, err.message);
+  });
   }
 }
