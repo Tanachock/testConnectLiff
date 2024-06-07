@@ -39,7 +39,7 @@ export class LiffService {
     return from(liff.init({ liffId: this.liff_id }));
   }
 
-  getProfile() {
+  /*getProfile() {
     return from(liff.getProfile());
   }
 
@@ -53,6 +53,6 @@ export class LiffService {
 
   logout() {
     return liff.logout();
-  }
+  }*/
 
 }
