@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit{
   profile: any;
   img: string = ''
   name: string = ''
-  uid: string = ''
+  uid: any
 
   constructor(private LiffService: LiffService) { }
   ngOnInit() {
